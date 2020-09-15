@@ -7,7 +7,7 @@ def attribute_parser(string):
   #split at ':', remove trailing whitespace and empty strings from more than one ':'
   string2 = list(map(lambda x:x.strip(), filter(lambda x:x != "", string1.split(":"))))
 
-
+  
   #create list of [non-last items, last item] pairs
   string3 = []
 
@@ -17,7 +17,7 @@ def attribute_parser(string):
     thing1 = thing.split(",")
     string3.append([thing1[:len(thing1)-1], thing1[len(thing1)-1]])
 
-  string3.append([string2[len(string2)-1],[]])
+  string3.append([[string2[len(string2)-1]],[]])
   
   #pair last item from one with non-last items from the next
   string4 = []

@@ -18,12 +18,12 @@ def attribute_parser(string):
   #pair last item from one with non-last items from the next
   string4 = []
   for i in range(len(string3)-1):
-    string4.append([string3[i][1], string3[i+1][0]])
+    string4.append([string3[i][1].strip(), string3[i+1][0]])
   
   #make dictionary
   string5 = {}
   for thing in string4:
-    string5[thing[0].strip()] = ",".join(thing[1])
+    string5[thing[0]] = ",".join(thing[1])
 
   return string5
 
